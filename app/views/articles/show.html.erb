@@ -1,0 +1,14 @@
+<h1><%= @article.title %> </h1>
+
+<%= link_to edit_article_path(@article) do %> <i class="fas fa-pencil-alt"></i> <% end %>
+
+<%= link_to article_path(@article), method: :delete, data: { confirm: "Are you sure there? I mean..." } do %>
+  <i class="far fa-trash-alt"></i>
+<% end %>
+
+
+  <p><%= @article.content %></p>
+
+<p>
+  <%= link_to "Back to home", articles_path, class: 'btn btn-primary btn-sm' %>
+</p>
